@@ -1,0 +1,8 @@
+.container{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}

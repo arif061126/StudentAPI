@@ -1,0 +1,31 @@
+<div class="container">
+  <h1 style="padding-bottom: 10px; padding-top: 10px;">Student Info</h1>
+
+
+  <mat-grid-list cols="3" rowHeight="1:1">
+
+    <ng-container *ngIf="student">
+      <mat-grid-tile *ngFor="let s of student">
+        <mat-card class="card">
+          <mat-list role="list">
+
+            <mat-list-item role="listitem">Student ID: &nbsp;<span> {{s.studentId}}</span></mat-list-item>
+            <mat-list-item role="listitem">Student Name: &nbsp;<span> {{s.studentName}}</span></mat-list-item>
+            <mat-list-item role="listitem">Student Email: &nbsp;<span> {{s.studentEmail}}</span>
+            </mat-list-item>
+            <mat-list-item role="listitem">Student's Date of Birth: &nbsp;<span> {{s.studentDateOfBirth}}</span>
+            </mat-list-item>
+            <mat-list-item role="listitem">Student Age: &nbsp;<span> {{s.studentAge}}</span>
+            </mat-list-item>
+
+          </mat-list>
+        </mat-card>
+      </mat-grid-tile>
+    </ng-container>
+
+  </mat-grid-list>
+
+
+  <a mat-raised-button color="accent" (click)="getStudents()">See Student Details</a>&nbsp;&nbsp;&nbsp;
+  <button routerLink="" mat-raised-button color="primary">Go to Home</button>
+</div>
