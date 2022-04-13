@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { StudentComponent } from './components/student/student.component';
 import { AddstudentComponent } from './components/addstudent/addstudent.component';
+import { UpdateStudentComponent } from './update-student/update-student.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,11 @@ const routes: Routes = [
   {
     path: "addStudent",
     component:AddstudentComponent,
+    pathMatch:"full"
+  },
+  {
+    path: "update-student/:id",
+    component:UpdateStudentComponent,
     pathMatch:"full"
   }
 ];

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Data, Router } from '@angular/router';
 import { StudentService } from 'src/app/service/student.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { StudentService } from 'src/app/service/student.service';
 
 export class AddstudentComponent implements OnInit {
 
-  constructor(private snackbar: MatSnackBar, private student:StudentService) { }
+  constructor(private snackbar: MatSnackBar, private student:StudentService, private router: Router) { }
   durationInSeconds = 5;
 
   data = {
@@ -39,6 +40,7 @@ export class AddstudentComponent implements OnInit {
     this.student.addStudent(this.data).subscribe(
       response => {
         console.log(response);
+        this.router.navigate(["showStudents"]);
       },
       error => {
         console.log(error);

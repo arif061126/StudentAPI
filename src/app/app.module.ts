@@ -44,7 +44,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { GetstudentService } from './service/getstudent.service';
 
 //grid
-import {MatGridListModule} from '@angular/material/grid-list'; 
+import {MatGridListModule} from '@angular/material/grid-list';
+import { UpdateStudentComponent } from './update-student/update-student.component'; 
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     NavbarComponent,
     HomeComponent,
     StudentComponent,
-    AddstudentComponent
+    AddstudentComponent,
+    UpdateStudentComponent
   ],
   imports: [
     BrowserModule,

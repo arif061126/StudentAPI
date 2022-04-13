@@ -1,18 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Student } from './student';
 
 @Injectable({
   providedIn: 'root'
 })
-export class GetstudentService {
+export class DeleteStudentService {
 
   private baseUrl: String = "http://localhost:8080/api/v1/student";
 
   constructor(private http:HttpClient) { }
 
-  getStudent() {
-    return this.http.get(`${this.baseUrl}`);
+  deleteStudentById(id:any) {
+    return this.http.delete(`${this.baseUrl}/${id}`);
   }
-
 }

@@ -1,0 +1,36 @@
+<div>
+  <mat-card>
+    <mat-card-header>
+      <h1>Update Student</h1>
+
+    </mat-card-header>
+    <mat-card-content class="">
+      <form (ngSubmit)="onSubmit()" method="post">
+
+        <mat-form-field class="field" appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput type="text" name="studentName" placeholder="Name of Student" [(ngModel)]="data.studentName">
+        </mat-form-field>
+
+        <mat-form-field class="field" appearance="outline">
+          <mat-label>E-mail</mat-label>
+          <input type="email" name="studentEmail" matInput placeholder="xxx@yyy.zzz" [(ngModel)]="data.studentEmail">
+        </mat-form-field>
+
+        <mat-form-field class="field" appearance="outline">
+          <mat-label>Date of Birth</mat-label>
+          <input type="date" name="studentDateOfBirth" matInput placeholder="dd/mm/yyyy"
+            [(ngModel)]="data.studentDateOfBirth">
+        </mat-form-field>
+
+
+        <mat-card-footer class="container field">
+          <button type="submit" mat-raised-button color="primary">Submit</button>&nbsp;&nbsp;&nbsp;
+          <button type="reset" mat-raised-button color="primary">Reset</button>
+          <br><br><br>
+        </mat-card-footer>
+      </form>
+
+    </mat-card-content>
+  </mat-card>
+</div>

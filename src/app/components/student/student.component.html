@@ -2,7 +2,7 @@
   <h1 style="padding-bottom: 10px; padding-top: 10px;">Student Info</h1>
 
 
-  <mat-grid-list cols="3" rowHeight="1:1">
+  <mat-grid-list cols="2" rowHeight="1:1">
 
     <ng-container *ngIf="student">
       <mat-grid-tile *ngFor="let s of student">
@@ -19,6 +19,8 @@
             </mat-list-item>
 
           </mat-list>
+          <button mat-raised-button color="primary" (click)="updateStudent(s.studentId)">Update</button>&nbsp;&nbsp;
+          <button mat-raised-button color="accent" (click)="deleteStudent(s.studentId)">Delete</button>
         </mat-card>
       </mat-grid-tile>
     </ng-container>
